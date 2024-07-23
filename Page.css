@@ -15,54 +15,61 @@ body{
     padding: 0;
     max-height: 100%;
     max-width: 100%;
-    grid-template-columns: 100%;
+    grid-template-columns: 1fr;
     grid-template-rows: 75px 40px;
     grid-template-areas: 
     'header'
     'subheader'
     ;
 }
-.header{
+.header {
+    padding-left: 20px;
+    padding-right: 20px;
     display: grid;
     position: sticky;
-    grid-template-columns: 100px 1fr 100px;
+    grid-template-columns: minmax(50px, 1fr) auto minmax(50px, 1fr);
     grid-template-rows: 1fr;
     grid-template-areas: 
-    'menu-area name-area search-area'
-    ;
+    'menu-area name-area search-area';
     background-color: rgb(255, 188, 188);
     grid-area: header;
+    height: 75px; /* Match the grid-template-rows in .container */
 }
 
-.button{
+.button {
     margin: 0;
     padding: 0;
-    height: 32px;
-    width: 32px;
+    width: 4vw; /* Responsive width */
+    height: 4vw; /* Responsive height */
+    max-width: 30px; /* Maximum size */
+    max-height: 30px; /* Maximum size */
     justify-self: center;
     align-self: center;
 }
-.menu{
-    background: url(Source/Hamburger_icon.svg) no-repeat center;
-    background-size: cover;
-    grid-area: menu-area;
-}
-.search{
 
-    background: url(Source/search.png) no-repeat center;
-    background-size: cover;
-    grid-area: search-area;
-
-}
-.logo{
+.logo {
     height: 65px;
-    width: 400px;
+    width: 300px;
     background: url(Source/logo.png) no-repeat center;
     background-size: contain;
     justify-self: center;
     align-self: center;
     grid-area: name-area;
 }
+.menu{
+    justify-self: left;
+    background: url(Source/Hamburger_icon.svg) no-repeat center;
+    background-size: cover;
+    grid-area: menu-area;
+}
+.search{
+    justify-self: right;
+    background: url(Source/search.png) no-repeat center;
+    background-size: cover;
+    grid-area: search-area;
+
+}
+
 .subheader{
     display: flex;
     align-items: center;
