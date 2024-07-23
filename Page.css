@@ -1,15 +1,17 @@
-html{
-
+html {
     font-family: "Varela Round", sans-serif;
     font-weight: 400;
     font-style: normal;
-      
 }
-body{
+
+body {
     margin: 0;
     padding: 0;
+    background-color: rgb(209, 245, 245);
+    box-sizing: border-box;
 }
-.container{
+
+.container {
     display: grid;
     margin: 0;
     padding: 0;
@@ -20,31 +22,38 @@ body{
     grid-template-areas: 
     'header'
     'subheader'
-    ;
+    'content';
 }
+
 .header {
-    padding-left: 20px;
-    padding-right: 20px;
+    margin: 0;
+    padding: 0 20px;
     display: grid;
-    position: sticky;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     grid-template-columns: minmax(50px, 1fr) auto minmax(50px, 1fr);
     grid-template-rows: 1fr;
     grid-template-areas: 
     'menu-area name-area search-area';
     background-color: rgb(255, 188, 188);
     grid-area: header;
-    height: 75px; /* Match the grid-template-rows in .container */
+    height: 75px;
+    box-sizing: border-box;
+    z-index: 1000;
 }
 
 .button {
     margin: 0;
     padding: 0;
-    width: 4vw; /* Responsive width */
-    height: 4vw; /* Responsive height */
-    max-width: 30px; /* Maximum size */
-    max-height: 30px; /* Maximum size */
+    width: 30px;
+    height: 30px;
     justify-self: center;
     align-self: center;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .logo {
@@ -56,25 +65,32 @@ body{
     align-self: center;
     grid-area: name-area;
 }
-.menu{
+
+.menu {
     justify-self: left;
     background: url(Source/Hamburger_icon.svg) no-repeat center;
-    background-size: cover;
+    background-size: contain;
     grid-area: menu-area;
 }
-.search{
+
+.search {
     justify-self: right;
     background: url(Source/search.png) no-repeat center;
-    background-size: cover;
+    background-size: contain;
     grid-area: search-area;
-
 }
 
-.subheader{
+.subheader {
     display: flex;
     align-items: center;
     justify-content: space-around;
     background-color: rgb(231, 171, 171);
     grid-area: subheader;
+    height: 40px;
+    z-index: 999;
 }
 
+.content {
+    grid-area: content;
+    height: 1000px;
+}
