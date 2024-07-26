@@ -61,7 +61,7 @@ body {
 
 .logo {
     height: 65px;
-    width: 300px;
+    width: clamp(50vw,25%,300px);
     background: url(../Source/logo.png) no-repeat center;
     background-size: contain;
     justify-self: center;
