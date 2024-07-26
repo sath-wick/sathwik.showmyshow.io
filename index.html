@@ -2,26 +2,32 @@
 <html lang="en">
 <head>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Varela+Round&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
         </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" >
     <title>Document</title>
-    <link rel="stylesheet" href="Page.css">
+    <link rel="stylesheet" href="CSS/FixedHeader.css">
+    <link rel="stylesheet" href="CSS/Page.css">
+
 </head>
 <body>
     <div class="container">
         <div class="header">
             <div class="button menu"></div>
-            <div class="logo"></div>
+            <a class="logo" href="index.html"></a>
             <div class="button search"></div>
         </div>
         <div class="subheader">
-            <div class="sub movies">Movies</div>
-            <div class="sub events">Events</div>
-            <div class="sub stream">Stream</div>
+            <a id="moviesBtn" class="subBtn" href="HTML/newMovies.html">Movies</a>
+            <a id="eventsBtn" class="subBtn" href="HTML/newMovies.html">Events</a>
+            <a id="streamBtn" class="subBtn" href="HTML/newMovies.html">Stream</a>
         </div>
-        <div class="content"></div>
+        <div class="content">
+            <div class="newmovies list"><p>New Arrivals</p></div>
+            <div class="reccmovies list"><p>Recommended For You</p></div>
+            <div class="genremovies list"><p>Pick Your Poison</p></div>
+        </div>
     </div>
 
 </body>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <link rel="stylesheet" href="../CSS/FixedHeader.css">
+    <link rel="stylesheet" href="../CSS/newMoviesStyle.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <!--FIXED HEADER-->
+    <div class="container">
+        <div class="header">
+            <div class="button menu"></div>
+            <a class="logo" href="../index.html"></a>
+            <div class="button search"></div>
+        </div>
+        <div class="subheader">
+            <a id="moviesBtn" class="subBtn" href="../HTML/newMovies.html">Movies</a>
+            <a id="eventsBtn" class="subBtn" href="newMovies.html">Events</a>
+            <a id="streamBtn" class="subBtn" href="newMovies.html">Stream</a>
+        </div>
+        <div class="content">
+            <div class="filtermenu">
+                <h2>Filters</h2>
+                <div id="genreTab">
+                    <div id="genreBtn">
+                        <div id="GenreCaret"></div>
+                        <p style="justify-self: left;">Genre</p>
+                    </div>
+                    <div id="genres">
+                        <ul id="genreList">
+                            <li id="horrorGenre">Horror</li>
+                            <li id="thrillerGenre">Thriller</li>
+                            <li id="dramaGenre">Drama</li>
+                            <li id="actionGenre">Action</li>
+                            <li id="romanceGenre">Romance</li>
+                            <li id="animationGenre">Animation</li>
+                            <li id="crimeGenre">Crime</li>
+                            <li id="sportsGenre">Sports</li>
+                            <li id="mysteryGenre">Mystery</li>
+
+                        </ul>
+                    </div>
+                </div>
+               
+                <div id="languageTab">
+                    <div id="languageBtn">
+                        <div id="LanguageCaret"></div>
+                        <p style="justify-self: left;">Language</p>
+                    </div>
+                    <div id="languages">
+                        <ul id="languageList">
+                            <li id="englishLang">English</li>
+                            <li id="hindiLang">Hindi</li>
+                            <li id="teluguLang">Telugu</li>
+                            <li id="tamilLang">Tamil</li>
+                            <li id="malayalamLang">Malayalam</li>
+                            <li id="kannadaLang">Kannada</li>
+                         </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="movies">
+
+            </div>
+        </div>
+
+    </div>
+<!--FIXED HEADER-->    
+<script src="../JS/newMoviesScript.js?v=1.01"></script>   
+</body>
+</html>
