@@ -47,3 +47,22 @@ languageElements.forEach(element => {
         this.classList.toggle('selectGenre');
     });
 });
+
+const filterbtn = document.getElementById('filterbtn')
+filterbtn.onclick = function(){
+    toggleFilterWindow();
+}
+
+function toggleFilterWindow(){
+    filterbtn.classList.toggle('filterbtnhidden');
+    document.getElementById('filterwindow').classList.toggle('filterwindowshow');
+}
+const filterClose = document.getElementById('close');
+filterClose.onclick = function(){
+    toggleFilterWindow();
+}
+
+const filterDone = document.getElementById('done');
+filterDone.onclick = function(){
+    toggleFilterWindow();
+}

@@ -1,0 +1,9 @@
+@media (max-width: 1000px){
+    .filtermenu{
+        display: none;
+    }
+    #filterbtn{
+        display: block;
+    }
+    
+}

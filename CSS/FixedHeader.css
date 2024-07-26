@@ -1,4 +1,8 @@
 /*FIXED HEADER*/
+:root{
+    --buttonWeight: 700;
+    --buttonColor:rgb(51, 59, 51);
+}
 html {
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
@@ -21,14 +25,16 @@ body {
     max-height: 100%;
     max-width: 100%;
     grid-template-columns: 1fr;
-    grid-template-rows: 75px 40px;
+    grid-template-rows: 75px 40px auto 30px;
     grid-template-areas: 
     'header'
     'subheader'
-    'content';
+    'content'
+    'footer';
 }
 
 .header {
+    --headerHeight: 75px;
     margin: 0;
     padding: 0 20px;
     display: grid;
@@ -42,7 +48,7 @@ body {
     'menu-area name-area search-area';
     background-color: rgb(255, 188, 188);
     grid-area: header;
-    height: 75px;
+    height: var(--headerHeight);
     box-sizing: border-box;
     z-index: 1000;
 }
@@ -95,8 +101,8 @@ body {
 
 .subBtn{
     text-decoration: none;
-    color: rgb(51, 59, 51);
-    font-weight: 700;
+    color: var(--buttonColor);
+    font-weight: var(--buttonWeight);
     user-select: none;
     cursor: pointer;
 }

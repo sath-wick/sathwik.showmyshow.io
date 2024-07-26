@@ -2,7 +2,7 @@
     padding-left: 30px;
     padding-top: 30px;
     grid-area: content;
-    max-height:100%;
+    max-height:min-content;
     display: grid;
     grid-template-columns: 15% auto;
     grid-auto-flow: row;
@@ -13,6 +13,7 @@
 }
 
 .filtermenu{
+    width: clamp(200px,10vw,15vw);
     box-sizing: border-box;
     display: flex;
     align-content: space-evenly;
@@ -20,7 +21,6 @@
     flex-direction:column;
     grid-area:filter-area;
     height: min-content;
-    width: min-content;
     
 }
 
@@ -101,6 +101,62 @@
     background-color: #b890904d !important;
 }
 
-#movies{
-    background-color: red;
+#filterbtn{
+    display: none;
+    border: none;
+    cursor: pointer;
+    background: url(../Source/filter.png) no-repeat center ;
+    background-size: contain;
+    background-color: rgb(253, 200, 200);
+    border-radius: 10%;
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    bottom:20px;
+    right: 20px;
 }
+
+#filterbtn.filterbtnhidden{
+    display: none;
+}
+
+
+#filterwindow{
+    display:none;
+    flex-direction: column;
+    align-content:right;
+    justify-content: space-between;
+
+    --topOffset: 115px;
+    position: absolute;
+    box-sizing: border-box;
+    margin-top: var(--topOffset);
+    
+    width: 100vw;
+    height: calc(100vh - var(--topOffset));
+   
+   
+    background-color: #eac9c9e5;
+}
+
+#filterwindow.filterwindowshow{
+    display: flex;
+}
+#close, #done{
+    font-weight: var(--buttonWeight);
+    color: var(--buttonColor);
+    font-size: 1.8em;
+    cursor: pointer;
+    background: none;
+    border: none;
+    width: min-content;
+}
+
+#done{
+    border-radius: 10px;
+    align-self: center;
+    width: 100%;
+    background-color: rgb(249, 110, 110);
+}
+
+ 
