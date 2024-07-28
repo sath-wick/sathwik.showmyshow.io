@@ -1,6 +1,12 @@
 var genrePressed = false;
 var languagePressed = false;
 
+function toggleFilterWindow(){
+    filterbtn.classList.toggle('togglefilterbtn');
+    document.getElementById('filterwindow').classList.toggle('togglefilterwindow');
+}
+
+
 const genreButton = document.getElementById('genreBtn');
 genreButton.addEventListener('click',function(){
     const caret = document.getElementById('GenreCaret');
@@ -53,10 +59,7 @@ filterbtn.onclick = function(){
     toggleFilterWindow();
 }
 
-function toggleFilterWindow(){
-    filterbtn.classList.toggle('filterbtnhidden');
-    document.getElementById('filterwindow').classList.toggle('filterwindowshow');
-}
+
 const filterClose = document.getElementById('close');
 filterClose.onclick = function(){
     toggleFilterWindow();

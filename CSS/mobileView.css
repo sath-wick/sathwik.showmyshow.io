@@ -5,5 +5,12 @@
     #filterbtn{
         display: block;
     }
-    
+    .content{
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        box-sizing: border-box;
+        grid-area:content;
+        display: flex;
+    }
 }
